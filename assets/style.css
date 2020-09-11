@@ -1,0 +1,503 @@
+
+body {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	color: #777777;
+	font-size: 14px;
+	line-height: 24px;
+}
+/* Style the header: fixed position (always stay at the top) */
+.header {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+	width: 100%;
+	background-color: #f1f1f1;
+}
+/* The progress container (grey background) */
+.progress-container {
+	width: 100%;
+	height: 4px;
+	background: #ccc;
+}
+/* The progress bar (scroll indicator) */
+.progress-bar {
+	height: 4px;
+	background: orange;
+	width: 0%;
+}
+/* The navbar */
+.navbar {
+	top: 4px;
+}
+@font-face {
+		font-family: "logo-font";
+		src: url(../fonts/AnkeHand.ttf);
+}
+nav .navbar-brand {
+	font-family: logo-font;
+	color: white;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+nav .navbar-brand span {
+	color: orange;
+}
+/* The navbar links */
+.navbar-nav .nav-item .nav-link {
+	font-size: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	letter-spacing: 0.03em;
+	margin: 0 20px;
+}
+.navbar-nav .nav-item .nav-link:hover {
+	color: orange;
+}
+/* add top margin under navbar */
+.header-intro {
+	margin-top: 50px;
+	box-shadow: 3px 0px 5px 2px grey;
+}
+/* For larger screens */
+@media only screen and (min-width: 768px) {
+	.navbar {
+		height: 70px;
+	}
+	.header-intro, section {
+		margin-top: 70px;
+	}
+	.right p {
+		margin-left: 80px;
+	}
+	.history-item {
+		height: 150px!important;
+		margin-bottom: 30px;
+	}
+	.timeline-wrapper {
+		padding-right: 60px!important;
+	}
+	.middle {
+		position: absolute;
+		width: 30px;
+		left: 44%!important;
+		height: inherit;
+	}
+	hr {
+		display: none;
+	}
+}
+/* Removes button outline */
+.navbar button {
+	outline: none !important;
+}
+.navbar-toggler {
+	background-color: transparent;
+	border: none;
+}
+.navbar-toggler .menu-btn {
+	color: white;
+}
+/* The orange header with backgroung */
+.header-intro {
+	color: white;
+	background-image: url(../img/texture-wallpaper-preview-1.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+/* The orange overlay */
+.header-intro .overlay {
+	background-color: orange;
+	padding: 160px 50px;
+	opacity: 0.9;
+}
+.header-intro .overlay h3 {
+	text-transform: capitalize;
+	font-weight: 200;
+	padding: 8px 0;
+}
+.header-intro .overlay h3.last {
+	padding-bottom: 50px;
+}
+/* For each skill */
+.skill {
+	padding: 5px 0;
+}
+.skill i {
+	font-size: 50px;
+	margin-bottom: 30px;
+}
+/* For margin and padding on smaller screens */
+@media only screen and (max-width: 991px) {
+	.skill-1, .skill-2 {
+		margin-bottom: 50px;
+	}
+	.header-intro .overlay {
+		padding-bottom: 20px;
+	}
+	.my-skills {
+		color: #343A40;
+		padding: 60px 30px;
+	}
+	.skills-left, .skills-right {
+		padding: 30px 60px;
+	}
+	.img-responsive:first-of-type {
+		margin-bottom: 30px;
+	}
+}
+@media only screen and (max-width: 576px) {
+	.skills-left, .skills-right {
+		padding: 30px 5px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.middle {
+		display: none;
+	}
+	.left h3, .left p, .right p {
+		text-align: left;
+		padding-left: 20px;
+	}
+	
+	.right p {
+	    width: 95%!important;
+		text-align: justify!important;
+	}
+	.contact {
+		margin-top: 30px!important;
+	}
+	section {
+		margin-top: 50px!important;
+	}
+	.img-responsive {
+		height: 450px!important;
+		margin-bottom: 50px!important;
+	}
+	.portfolio-container {
+		padding-bottom: 30px!important;
+	}
+}
+@media only screen and (min-width: 991px) {
+	.skills-left .skills-ul li .skill-bar-holder .skill-capacity {
+		margin-left: auto;
+	}
+	.skills-left h3 {
+		text-align: right;
+	}
+	.skills-left .skills-ul li span {
+		display: block;
+		text-align: right;
+		text-transform: capitalize;
+	}
+	
+	.my-skills {
+		color: #343A40;
+		padding: 60px 110px;
+	}
+	/* For swapping columns after 991 px */
+	.history-item .swapleft {
+		order: 2;
+	}
+	/* align the swapped culuns content */
+	.swapleft h3, .swapleft p {
+		text-align: left;
+		padding-left: 80px;
+	}
+	
+	.swapright .right p {
+		text-align: right;
+		padding-right: 80px;
+		width: 100%;
+		margin-left: auto;
+	}
+	.middle {
+		position: absolute;
+		width: 30px;
+		left: 46%!important;
+		height: inherit;
+	}
+	.form-wrapper, .contact-info-wrapper {
+		padding: 20px 30px;
+	}
+}
+/* For specific skills with progress bars */
+.skills .skills-ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.skills h3 {
+	font-size: 35px;
+	text-transform: capitalize;
+	font-weight: 600;
+} 
+.skills .skills-ul li .skill-bar-holder {
+	width: 100%;
+	background-color: #d9d9d9;
+	height: 10px;
+	margin-top: 10px;
+} 
+.skills .skills-ul li .skill-bar-holder .skill-capacity {
+	width: 0%;
+	background-color: orange;
+	height: 10px;
+}
+/* For each skill capacity */
+.skills .skills-ul li .skill-bar-holder .web-design {
+	width: 70%;
+}
+.skills .skills-ul li .skill-bar-holder .branding-and-identity {
+	width: 52%;
+}
+.skills .skills-ul li .skill-bar-holder .mobile-design {
+	width: 95%;
+}
+.skills .skills-ul li .skill-bar-holder .dtp {
+	width: 50%;
+}
+.skills .skills-ul li .skill-bar-holder .html-css3 {
+	width: 98%;
+}
+.skills .skills-ul li .skill-bar-holder .php-mysql {
+	width: 39%;
+}
+.skills .skills-ul li .skill-bar-holder .javascript-jquery {
+	width: 35%;
+}
+.skills .skills-ul li .skill-bar-holder .wordpress {
+	width: 25%;
+}
+.skills-ul li {
+	padding: 15px 0px;
+}
+/* For skills capacity headings */
+.skills-left .skills-ul li span, .skills-right .skills-ul li span {
+	font-weight: 600;
+	font-size: 17px;
+	text-transform: capitalize;
+}
+.skills-heading h1 {
+	font-size: 40px;
+	font-weight: 400;
+	border-left: 8px solid orange;
+	margin: 20px 90px 50px;
+	text-transform: capitalize;
+}
+.timeline-wrapper {
+	position: relative;
+	background-color: #f2f2f2;
+	padding-bottom: 30px;
+	padding: 30px;
+}
+/* For timeline heading */
+.timeline-wrapper .timeline-heading h1 {
+	font-size: 30px;
+	font-weight: 400;
+	border-left: 8px solid orange;
+	margin: 90px 0;
+	text-transform: capitalize;
+	color: #737373;
+}
+
+/* For timeline rows */
+.history-item {
+	height: auto;
+	margin-bottom: 30px;
+}
+/* For left side of timeline */
+.left {
+	text-align: right;
+	padding-right: 80px;
+}
+.left h3 {
+	font-weight: 600;
+	font-size: 30px;
+}
+.left p {
+	font-weight: 800;
+	font-size: 20px;
+	color: #262626;
+	text-transform: capitalize;
+}
+/* For right side of timeline */
+.right p {
+	width: 80%;
+	text-transform: capitalize;
+	font-size: 15px;
+	text-align: left;
+	font-weight: 600;
+}
+.middle {
+	position: absolute;
+	width: 30px;
+	left: 49%;
+	height: inherit;
+}
+.history-item .middle i {
+    font-size: 50px;
+	color: orange;
+}
+.history-item .middle .line {
+	top: 60px;
+    width: 2px;
+    height: 60%;
+    background: orange;
+    position: absolute;
+    left: 50%;
+    margin-left: 12px;
+}
+footer {
+	text-align: center;
+	padding: 35px;
+	background-color: black;
+	font-size: 15px;
+	opacity: 0.8;
+}
+
+footer a p i {
+	margin: 6px;
+	color: orange;
+}
+footer a {
+	display: inline-block;
+	color: inherit;
+	text-decoration: none;
+}
+footer a:hover {
+	color: inherit;
+	text-decoration: none;
+	cursor: pointer;
+}
+.contact {
+	margin-top: 70px;
+	padding: 50px;
+	background-color: #d9d9d9;
+}
+/* Style inputs with type="text", textareas */
+input[type=text], textarea {
+	width: 100%; /* Full width */
+	padding: 5px; /* Some padding */
+	border: none; /* Gray border */
+	border-radius: 4px; /* Rounded borders */
+	box-sizing: border-box; /* Make sure that padding and width stays in place */
+	margin-top: 6px; /* Add a top margin */
+	margin-bottom: 16px; /* Bottom margin */
+	resize: none; /* Allow the user to vertically resize the textarea (not horizontally) */
+	opacity: 0.7;
+}
+input[type=text]:focus, textarea:focus {
+	outline: none;
+	box-shadow: 0 0 10px orange;
+}
+/* Style the submit button with a specific background color etc */
+input[type=submit]{
+	background-color: orange;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	width: 100%;
+}
+/* When moving the mouse over the submit button, add a darker orange color */
+input[type=submit]:hover {
+	background-color: #ff8000;
+}
+.form-wrapper, .contact-info-wrapper {
+	padding: 20px 10px;
+}
+.form-wrapper h3, .contact-info-wrapper h3 {
+	text-transform: capitalize;
+	margin-bottom: 40px;
+	font-size: 20px;
+}
+.contact-info-wrapper .contact-item p:first-child {
+	
+	font-weight: 700;
+	text-transform: capitalize;
+}
+.contact-info-wrapper .contact-item p:nth-child(2) {
+	margin-bottom: 40px;
+}
+hr {
+	margin-top: 40px;
+}
+/* For section in about page */
+section {
+	padding: 60px 50px;
+}
+.about-item h3 {
+	text-transform: capitalize;
+	border-bottom: 2px solid orange;
+	padding-bottom: 15px;
+	display: inline-block;
+}
+.about-item p {
+	font-size: 17px;
+	padding-top: 20px;
+}
+.about-item {
+	padding: 10px 20px;
+}
+
+.avatar {
+	background-image: url(../img/32116989_120562772148089_4171695335103528960_n.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 400px;
+}
+/* For portfolio page */
+.portfolio-container {
+	padding-top: 150px;
+	padding-bottom: 130px;
+	background-color: #d9d9d9;
+}
+
+.img-responsive {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+}
+.portfolio-element-wrapper {
+	position: relative;
+}
+
+.portfolio-element-wrapper .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.6);
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+.portfolio-element-wrapper:hover .overlay {
+  height: 100%;
+}
+.portfolio-element-wrapper .overlay .text-block {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 60%;
+	text-transform: capitalize;
+	color: orange;
+}
+.portfolio-element-wrapper .overlay .text-block button {
+	  border-radius: 7px;
+	  width: 60%;
+	  border: none;
+	  background-color: #4CAF50;
+	  color: white;
+	  padding: 10px 20px;
+	  font-size: 19px;
+	  cursor: pointer;
+	  text-align: center;
+}
